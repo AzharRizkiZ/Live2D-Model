@@ -83,26 +83,32 @@ html, body {
 }
 
 /* The modal is forced open via inline style="display:block" in index.html,
-   so it is centered here with flexbox instead of Bootstrap's JS-driven
+   so it is positioned here with flexbox instead of Bootstrap's JS-driven
    .show class. This replaces the old fixed left/margin-top pixel hacks,
-   which cut the box off on many screen sizes. */
+   which cut the box off on many screen sizes. Pinned to the bottom-right
+   corner so the Live2D character stays visible on the rest of the screen. */
 .modal {
     display: flex !important;
     position: fixed;
     inset: 0;
     left: 0;
     top: 0;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 24px;
     box-sizing: border-box;
     overflow-y: auto;
+    pointer-events: none;
+}
+
+.modal .modal-dialog {
+    pointer-events: auto;
 }
 
 .modal-dialog {
     width: 100%;
     max-width: 480px;
-    margin: auto;
+    margin: 0;
 }
 
 .modal-content {
@@ -132,6 +138,7 @@ html, body {
     .modal {
         padding: 12px;
         align-items: flex-end;
+        justify-content: center;
     }
 
     .modal-dialog {
@@ -162,7 +169,7 @@ html, body {
 
 @media only screen and (max-height: 500px) {
     .modal {
-        align-items: flex-start;
+        align-items: center;
         padding-top: 8px;
     }
 
