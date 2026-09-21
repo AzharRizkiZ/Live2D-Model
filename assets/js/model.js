@@ -172,7 +172,9 @@ const c_list_modelDir = [
     "/assets/models/Toaru-Majutsu-No-Index/uiharu/uiharu.model.json", // 149
     "/assets/models/Senkosan/senko.model3.json",                      // 150
     "/assets/models/New-Game!/aoba/2.json",                           // 151
-    "/assets/models/Oshi-No-Ko/HoshinoAi/Hoshino_Ai.model3.json"      // 152
+    "/assets/models/Oshi-No-Ko/HoshinoAi/Hoshino_Ai.model3.json",     // 152
+    "/assets/models/Chou-Kaguya-Hime/YachiyoRunami1/Yachiyo.model3.json", // 153
+    "/assets/models/Chou-Kaguya-Hime/YachiyoRunami2/八千代辉夜姬.model3.json" // 154
 ];
 
 /* Query Selector to Get Input Output Box and Drop Down Element on Page */
